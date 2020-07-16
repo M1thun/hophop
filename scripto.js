@@ -28,10 +28,10 @@ flag=1;}
 		    handleKey(event, false);
 		});
 
+document.addEventListener("touchstart", jump);
 
 
 
-		//step 2
 		function handleKey(event, status) {
 			var currentController = keyMap[event.keyCode];
 		    console.log(status);
