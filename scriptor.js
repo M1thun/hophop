@@ -76,7 +76,7 @@ function checkdead(){
 	setInterval(function(){
 	var ctop=parseInt(window.getComputedStyle(character).getPropertyValue("top"));
 	var bleft=parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    if(bleft<40 && bleft>20 && ctop>=130){
+    if(bleft<40 && bleft>1 && ctop>=130){
 		block.style.animationPlayState="paused";
 		character.style.animationPlayState="paused";
 	    document.getElementById("over").style.left = "185px";
