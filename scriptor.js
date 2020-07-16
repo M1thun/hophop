@@ -104,6 +104,6 @@ function checkdead(){
 
 function scorech(x){
 $(document).ready(function(){
-       $('#score').html("score is :"+x);
+       $('#score').html("Score is :"+x);
 });
 }
