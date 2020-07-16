@@ -19,6 +19,24 @@ checkdead();
 flag=1;}
 }
 
+document.addEventListener("touchstart", jump);
+
+
+document.getElementById("button").addEventListener("touchstart", replay);
+
+
+
+function replay(){
+	location.reload();
+}
+
+
+
+function stopper(){
+	clearInterval(interka);
+}
+
+
 
 		document.addEventListener("keydown", function(event) {
 		    handleKey(event, true);
@@ -28,10 +46,10 @@ flag=1;}
 		    handleKey(event, false);
 		});
 
-document.addEventListener("touchstart", jump);
 
 
 
+		//step 2
 		function handleKey(event, status) {
 			var currentController = keyMap[event.keyCode];
 		    console.log(status);
@@ -61,8 +79,14 @@ function checkdead(){
     if(bleft<40 && bleft>20 && ctop>=130){
 		block.style.animationPlayState="paused";
 		character.style.animationPlayState="paused";
-	    document.getElementById("over").innerHTML = "Game Over";
-	    document.getElementById("score").innerHTML = "Your final score is :"+score;
+	    document.getElementById("over").style.left = "185px";
+
+	    document.getElementById("over").innerHTML = "Game Over!!";
+	    document.getElementById("score").style.left = "160px";
+
+	    document.getElementById("score").innerHTML = "Your final score is : "+score;
+  document.getElementById("button").style.visibility = "visible";
+
 
 	}
 	else{
